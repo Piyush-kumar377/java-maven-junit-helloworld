@@ -12,6 +12,7 @@ public class Hello {
     public static final int MAXIMUM_AMOUNT_OF_TIMES = 20;
 
     private int times = 1;
+               private     int x=10;
 
     /**
      * Set how many times "Hello!" should be said.
@@ -24,7 +25,6 @@ public class Hello {
             throw new IllegalArgumentException(String.format(
                     "Parameter «times» should be a positive number no larger than %d.",
                     MAXIMUM_AMOUNT_OF_TIMES
-                int x=10;
             ));
         }
         this.times = times;
