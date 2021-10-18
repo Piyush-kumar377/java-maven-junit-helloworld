@@ -24,6 +24,7 @@ public class Hello {
             throw new IllegalArgumentException(String.format(
                     "Parameter «times» should be a positive number no larger than %d.",
                     MAXIMUM_AMOUNT_OF_TIMES
+                int x=10;
             ));
         }
         this.times = times;
