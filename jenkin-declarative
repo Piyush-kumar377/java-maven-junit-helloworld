@@ -2,9 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage("Checkout") {
             steps {
-                git credentialsId: 'github', url: 'https://github.com/Piyush-kumar377/java-maven-junit-helloworld.git
+                git credentialsId: 'github', url: 'https://github.com/Piyush-kumar377/java-maven-junit-helloworld.git'
+            }
+        }
+        stage(" Compile")
+        {
+            steps{
+                withMaven(maven:'maven_3_8_3')
+                {
+                    sh 'mvn clean compile'
+                }
             }
         }
     }
